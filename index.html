@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Birthday code</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9">
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://kit.fontawesome.com/9d89bb858d.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <!-- Loader code -->
+        <div class="loader_container">
+            <div class="loader_sub">
+                <div id="loader_1"></div>
+                <div id="loader_2"></div>
+                <div id="loader_3"></div>
+            </div>
+            <div class="loader_text"></div>
+        </div>
+        
+        <!-- A primary cover -->
+        <div id="primary"></div>
+        
+        
+        <!-- MAIN CONTAINER CODE -->
+        <div class="containt">
+            <!--profile start -->
+            <div class="main_profile">
+                <div class="img"></div>
+                <div id="profile_name">From 丹ⓨㄩک廾</div>
+                <div id="typewriter_container">     
+                    <div id="text"></div>
+                    <div id="cursor">|</div>    
+                </div>
+            </div>
+            
+            <!-- New section start -->
+        </div>
+        
+        
+        <!-- BAR CODE -->
+        
+        <div class="bar_container">
+            <div class="bar_icon" onclick="bar_function()">
+                <div id="bar_1"></div>
+                <div id="bar_2"></div>
+                <div id="bar_3"></div>
+            </div>
+            <div id="text_hb">
+                Happy Birthday Khushi
+            </div>
+        </div>
+        
+        <div class="bar_content_container">
+            <div id="bar_content_1">
+                <div id="bd_image"></div>
+                <div id="bd_name">To Khushi</div>
+            </div>
+            <div id="bar_content_2" onclick="openCake()">🎂 Your Birthday Cake</div>
+            <div id="bar_content_3" onclick="openSpin()">😂 Ye pata nahi kya hai dekho</div>
+            <div id="bar_content_4" onclick="warning()">🔥 Your Gift</div>
+            <div id="bar_content_6" onclick="nextpg()">⏭ See next page</div>
+            <br>
+            <hr style="width:95%;opacity:0.5;">
+            <div id="bar_content_5">I hope so you liked it.</div>
+        </div>
+        
+        
+        
+        
+        
+        
+        <!-- Seprate tamplets -->
+        <!-- cake code goes here-->
+        <div id="birthday_cake">
+            <div id="cut_cake" onclick="closeCake()">×</div>
+            <div class="baloon">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="cover"></div>
+        
+        <p>
+            BIRTHDAY CAKE
+        </p>
+        <div class="ak">
+     <svg width="100%" height="100%">
+     
+    <defs>
+        <radialGradient id="flame">
+            <stop offset="0%" stop-color="yellow"/>
+            <stop offset="100%" stop-color="orange"/>
+        </radialGradient>
+        
+         <g id="candle">
+          <path d="M154,206 S164,210 174,206 L174,206 L174,150 S164,140 153,150 Z" stroke="blue" fill="lightgreen"/>
+          <path d="M174,150 S160,165 154,150" stroke="blue" fill="none"/>
+          <path d="M152,140 S160,160 174,140 C179,130 171,120 172,110 L172,110 S150,120 152,140" stroke="red" fill="url(#flame)"/>
+          <path d="M162,151 S160,140 165,133" fill="none" stroke="blue"/>
+        </g>
+        <g id="apple">
+            <circle cx="86" cy="241" r="16" fill="#CB2026" stroke="brown"/>
+            <path d="M82,232 S85,237 93,235" fill="none" stroke="black"/>
+            <path d="M87,235 S85,215 105,210" stroke="#1C0E03" fill="none" style="stroke-width:3; "/>
+        </g>
+    </defs>
+    
+    
+    
+    <path d="M25,380 S170,445 310,385 L310,385 S318,320 313,289 L313,289 S301,297 290,293 L290,293 S273,285 268,300 L264,310 S257,326 244,310 L244,310 S235,300 225,314 L225,314 S212,350 185,320 L185,320 S167,304 161,320 L161,320 S154,340 145,322 L145,322 S143,310 130,307 L130,307 S120,302 112,310 L112,310 S097,342 088,310 L088,310 S083,299 075,296 L075,296 S058,287 056,300 L056,300 S050,317 042,300 L042,300 S035,279 025,287 L025,287 S022,360 025,380" stroke="brown" fill="#FBF48C"/>
+    <path d="M025,287 S015,290 016,275 L016,260 C030,165 300,165 325,260 L325,260 S327,284 313,289
+L313,289 S301,297 290,293 L290,293 S273,285 268,300 L264,310 S257,326 244,310 L244,310 S235,300 225,314 L225,314 S212,350 185,320 L185,320 S167,304 161,320 L161,320 S154,340 145,322 L145,322 S143,310 130,307 L130,307 S120,302 112,310 L112,310 S097,342 088,310 L088,310 S083,299 075,296 L075,296 S058,287 056,300 L056,300 S050,317 042,300 L042,300 S035,279 025,287" stroke="brown" fill="#352412"/>
+    <path d="M24,325 S190,392 314,330 L313,350 S195,412 24,345 Z" stroke="none" fill="#9D7C47"/>
+    <path d="M18,250 S170,345 323,255" fill="none" stroke="brown"/>
+    
+    <circle r="2" cx="30" cy="250" fill="white"/>
+    <circle r="2" cx="80" cy="260" fill="red"/>
+    <circle r="2" cx="70" cy="215" fill="green"/>
+    <circle r="2" cx="110" cy="220" fill="blue"/>
+    <circle r="2" cx="165" cy="220" fill="orange"/>
+    <circle r="2" cx="150" cy="280" fill="pink"/>
+    <circle r="2" cx="190" cy="285" fill="yellow"/>
+    <circle r="2" cx="220" cy="230" fill="red"/>
+    <circle r="2" cx="240" cy="270" fill="white"/>
+    <circle r="2" cx="260" cy="215" fill="pink"/>
+    <circle r="2" cx="310" cy="250" fill="green"/>
+    <circle r="2" cx="150" cy="250" fill="purple"/>
+    
+    <use xlink:href="#apple"/>
+    <use xlink:href="#apple" x="55" y="-21"/>
+    <use xlink:href="#apple" x="97" y="-5"/>
+    <use xlink:href="#apple" x="165" y="-5"/>
+
+    <use xlink:href="#candle" />
+    <use xlink:href="#candle" x="-70" y="10"/>
+    <use xlink:href="#candle" x="75" y="10"/>
+    <use xlink:href="#candle" x="-112" y="44"/>
+    <use xlink:href="#candle" x="119" y="48"/>
+    <use xlink:href="#candle" x="-37" y="63"/>
+    <use xlink:href="#candle" x="37" y="63"/>
+
+
+        </svg>
+        </div>
+        </div>
+        <!-- cake code ends here-->
+        <!-- spin code begins here -->
+        <div id="spin_container">
+            <div id="cut_spin" onclick="closeSpin()">×</div>
+            <div id="w1">
+            <div id="w2">
+                <div id="f1"></div>
+                <div id="f2"></div>
+                <div id="f3"></div>
+                <div id="f4"></div>
+                <div id="f5"></div>
+                <div id="f6"></div>
+            </div>
+            </div>
+        </div>
+        <audio id="aud" controls autoplay loop>
+            <source  src="https://www.dropbox.com/s/obql0j9q6bnkzg1/KGF%20BGM.mp3?raw=1" type="audio/mpeg"/>
+        </audio>
+        <iframe src="https://ayushkumarsingh2422005.github.io/happybirthday2/">
+            
+        </iframe>
+        <div id="rn" onclick="closepg()">Return back</div>
+        
+        
+        
+        <style>
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Chelsea+Market&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap');
+*{
+    box-sizing:border-box;
+    transition-duration:0.3s;
+    user-select:none;
+}
+body {
+    margin:0;
+    padding:0;
+}
+
+#text_hb{
+    font-size:20px;
+    display:inline-block;
+    text-align:center;
+    float:right;
+    padding-top:15px;
+    padding-right:15px;
+    font-family: 'Chelsea Market', cursive;
+    
+}
+/*Loader code goes here --------------------------*/
+
+.loader_container{
+    position:fixed;
+    top:0;
+    left:0;
+    height:100vh;
+    width:100vw;
+    background-color:black;
+    overflow:scroll;
+}
+.loader_sub{
+    height:150px;
+    width:150px;
+    background-color:transparent;
+    margin-top:calc(50vh - 150px);
+    margin-left:calc(50vw - 75px);
+    position:relative;
+}
+.loader_sub > div{
+    height:5px;
+    width:150px;
+    position:absolute;
+    bottom:0;
+    border-radius:50px;
+    animation:animate1 1s ease-out infinite;
+    background:linear-gradient(90deg, transparent ,#8DF3FF);
+    background-repeat:no-repeat;
+}
+.loader_s > div{
+    height:4px !important;
+    width:130px !important;
+}
+#loader_1{
+    transform-origin:50% 50%;
+    transform:rotate(180deg);
+}
+#loader_2{
+    transform:rotate(-60deg);
+    transform-origin:0% 50%;
+}
+#loader_3{
+    transform:rotate(60deg);
+    transform-origin:100% 50%;
+}
+
+@keyframes animate1{
+    0%{
+        background-size:0% 100%;
+    }
+    100%{
+        background-size:100% 100%;
+    }
+    
+}
+.loader_text{
+    height:20px;
+    width:100vw;
+    background-color:none;
+    position:fixed;
+    margin-top:50px;
+    text-align:center;
+    font-size:30px;
+    letter-spacing:5px;
+}
+.loader_text::before{
+    color:white;
+    content:"Loading";
+    animation:animate2 2s infinite;
+}
+
+@keyframes animate2{
+    0%{
+        content:"Loading";
+    }
+    25%{
+        content:"Loading.";
+    }
+    50%{
+        content:"Loading..";
+    }
+    75%{
+        content:"Loading...";
+    }
+    100%{
+        content:"Loading...";
+    }
+    
+}
+
+
+/*bar code goes here -----------------------------*/
+
+.bar_container{
+    height:50px;
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    background-color:#ffffff;
+    display:none;
+}
+.bar_container::before{
+    content:" ";
+    bottom:-10px;
+    position:absolute;
+    width:100%;
+    height:20px;
+    background-color:#ffffff;
+    border-radius:0 0 50px 50px;
+    border-radius:0 0 100% 100%;
+    box-shadow:0 6px 4px #d8d8d8;
+}
+.bar_icon{
+    height:50px;
+    width:50px;
+    background-color:transparent;
+    padding-top:15px;
+    z-index:0;
+    display:inline-block;
+    float:left;
+}
+
+.bar_icon > div{
+    height:2.4px;
+    border-radius:10px;
+    width:30px;
+    background-color:#616161;
+    transition-duration:0.5s;
+}
+
+#bar_1{
+    width:15px;
+    margin-left:calc(50% - 10px);
+    transform-origin:0% 50%;
+    /*transform:rotate(45deg);*/
+}
+#bar_2{
+    width:30px;
+    margin:8px auto;
+    transform-origin:50% 50%;
+    /*transform:rotate(-45deg);*/
+}
+#bar_3{
+    width:15px;
+    margin-left:calc(50% - 5px);
+    transform-origin:100% 50%;
+    /*transform:rotate(45deg);*/
+}
+
+.bar_content_container{
+    position:fixed;
+    height:calc(100vh);
+    width:80vw;
+    background-color:#f1f5f8;
+    top:0px;
+    left:-80vw;
+    box-shadow:0 3px 5px gray;
+    overflow:scroll;
+}
+
+.bar_content_container > div{
+    margin:30px 5px 30px 5px;
+    background-color:none;
+    height:30px;
+    font-size:20px;
+    line-height:30px;
+    font-family: 'Anton', sans-serif;
+}
+.bar_content_container > div:hover{
+    background-color:#d3d7da;
+}
+#bar_content_1{
+    width:100%;
+    height:200px;
+    background-color:#ffffff;
+    margin:0px;
+    padding-top:30px;
+    box-shadow:0 3px 5px gray;
+    font-family: 'Open Sans Condensed', sans-serif;
+    border-radius:0 0 5px 5px;
+}
+#bar_content_5{
+    font-size:15px;
+    text-align:right;
+}
+#bd_name{
+    width:100%;
+    text-align:center;
+    font-size:20px;
+    margin-top:20px;
+    margin-bottom:15px;
+}
+#bd_image{
+    height:100px;
+    width:100px;
+    border-radius:50%;
+    margin:0px auto 10px auto;
+    background-color:red;
+    background-image:url("https://www.dropbox.com/s/myqwwi9o70vk4d2/ic_launcher.png?dl=1");
+    background-size:cover;
+}
+/*content part goes here --------------------*/
+
+#primary{
+    position:fixed;
+    top:0;
+    height:calc(60px);
+    width:100%;
+    background-color:#e6e6e6;
+    left:0;
+    display:none;
+}
+.containt{
+    position:fixed;
+    top:60px;
+    height:calc(100vh - 60px);
+    width:100%;
+    background-color:blue;
+    left:0;
+    display:none;
+    overflow:scroll;
+}
+.main_profile{
+    height:calc(100vh - 60px);
+    width:100%;
+    background-color:#e6e6e6;
+    margin:0 auto;
+    padding-top:35vh;
+}
+.main_profile > .img{
+    display:block;
+    height:100px;
+    width:100px;
+    margin:0 auto 0 auto;
+    border-radius:50%;
+    background-image:url("https://api.sololearn.com/Uploads/Avatars/16882555.jpg");
+    background-size:cover;
+}
+#profile_name{
+    margin:30px auto 10px auto;
+    text-align:center;
+    font-size:30px;
+}
+#typewriter_container{
+    margin:10px auto;
+    text-align:center;
+}
+#text{
+    display:inline;
+    font-family: 'Chelsea Market', cursive;
+}
+#cursor{
+    display:inline-block;
+    vertical-align:middle;
+    width:3px;
+    height:18px;
+    animation: blink .50s step-end infinite;
+    line-height:60%;
+    font-size:20px;
+} 
+@keyframes blink{
+    from,to{
+        opacity:0;
+    }     
+    50%{
+        opacity:1;
+    }
+}
+
+
+
+/*seprate tamplate codes -------------------------*/
+
+
+#birthday_cake{
+    height:100vh;
+    width:100vw;
+    position:fixed;
+    top:0;
+    background-image:url("https://thumbs.gfycat.com/NegativeFineDingo-small.gif");
+    left:0;
+    display:none;
+}
+#cut_cake{
+    height:25px;
+    width:25px;
+    top:10px;
+    right:10px;
+    position:fixed;
+    border-radius:50%;
+    background-color:lime;
+    text-align:center;
+    font-size:23px;
+}
+.ak{
+    width:345px;
+    height:500px;
+} 
+.copy{
+    margin-top:30px;
+    font-size:2px;
+    text-align:right;
+}
+
+image{
+    opacity:0.5;
+}
+.cover{
+    margin-top:610px;
+    height:60px;
+    width:100%;
+    background-color:white;
+    position:absolute;
+    box-sizing:border-box;
+    left:0%;
+}
+.baloon{
+    margin-top:570px;
+    width:355px;
+    background-color:red;
+    text-align:center;
+    height:auto;
+    left:0%;
+    border-bottom:solid;
+    border-color:black;
+    position:absolute;
+}
+.baloon > div{
+    height:40px;
+    width:40px;
+    display:inline-block;
+    margin:0px 0px 0px 0px;
+    transform:rotate(45deg);
+    border-radius:20px 20px 2px 20px;
+    animation-name:ball;
+    animation-iteration-count:infinite;
+    animation-duration:10s;
+    background-color:red;
+}
+@keyframes ball{
+    from{
+        transform:translate(0%,0%) rotate(45deg);
+    }
+    to{
+        transform:translate(0%,-650px) rotate(45deg);
+        background-color:blue;
+    }
+}
+.baloon > div:nth-child(1){
+    animation-delay:0.5s;
+    background-color:red;
+}
+.baloon > div:nth-child(2){
+    animation-delay:3.3s;
+    background-color:blue;
+}
+.baloon > div:nth-child(3){
+    animation-delay:2.4s;
+    background-color:green;
+}
+.baloon > div:nth-child(4){
+    animation-delay:5.1s;
+    background-color:orange;
+}
+.baloon > div:nth-child(5){
+    animation-delay:6.7s;
+    background-color:pink;
+}
+.baloon > div:nth-child(6){
+    animation-delay:9.6s;
+    background-color:purple;
+}
+.baloon > div:nth-child(7){
+    animation-delay:8.5s;
+    background-color:yellow;
+}
+.baloon > div:nth-child(8){
+    animation-delay:4.5s;
+    background-color:gray;
+}
+
+p{
+    font-size:25px;
+    font-weight:bold;
+    font-family:cursive;
+    text-align:center;
+    background-color:green;
+    margin:0 auto;
+    width:200px;
+    border-radius:10px;
+    animation-name:ak;
+    animation-direction:alternate;
+    animation-duration:15s;
+    animation-iteration-count:infinite;
+}
+@keyframes ak{
+    0%{
+        transform:scale(0);
+        background-color:red;
+        color:white;
+    }
+    10%{
+        transform:scale(1);
+        background-color:blue;
+        color:pink;
+    }
+    20%{
+        transform:scale(0);
+        background-color:green;
+        color:red;
+    }
+    30%{
+        transform:scale(1);
+        background-color:pink;
+        color:purple;
+    }
+    40%{
+        transform:scale(0);
+        background-color:yellow;
+        color:black;
+    }
+    50%{
+        transform:scale(1);
+        background-color:orange;
+        color:red;
+    }
+    60%{
+        transform:scale(0);
+        background-color:gray;
+        color:white;
+    }
+    70%{
+        transform:scale(1);
+        background-color:purple;
+        color:white;
+    }
+    80%{
+        transform:scale(0);
+        background-color:black;
+        color:white;
+    }
+    90%{
+        transform:scale(1);
+        background-color:red;
+        color:blue;
+    }
+    100%{
+        transform:scale(0);
+    }
+}
+/*-------------------------------------------*/
+#spin_container{
+    height:100vh;
+    width:100vw;
+    position:fixed;
+    top:0;
+    background-image:url("https://i.pinimg.com/originals/20/21/7f/20217f7fa2c9701b8128d8fb153a4db9.gif");
+    left:0;
+    display:none;
+}
+#cut_spin{
+    height:25px;
+    width:25px;
+    top:10px;
+    right:10px;
+    position:fixed;
+    border-radius:50%;
+    background-color:lime;
+    text-align:center;
+    font-size:23px;
+}
+#w1 {
+    perspective: 800px;
+    width:200px;
+    height:200px;
+}
+#w2 {
+    position: absolute ;
+    width: 200px;
+    transform-origin: 100px 100px 0;
+    height:200px;
+    transform-style: preserve-3d;
+    margin-top:calc(50vh - 100px);
+    margin-left:calc(50vw - 100px);
+    animation: spin 60s ease-in-out infinite ;
+}
+#w2 > div {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    transform-origin: 100px 100px 0;
+    opacity:0.9;
+    transition-duration:2s;
+    
+}
+#f1 {
+    transform: translateZ(100px);
+    box-shadow: 0 0 10px lightgray;
+    background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTII_GRn6_aEldP79AgY6qFsjdbdUhNFo-A6A&usqp=CAU");
+    background-size:100% 100%;
+}
+#f2 {
+    transform: rotateY(180deg) translateZ(100px);
+    box-shadow: 0 0 10px lightgray;
+    background-color:chocolate;
+    background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQmPNTuT2zsjCgmOCCj8QciHnCIofbefJlhkg&usqp=CAU");
+    background-size:100% 100%;
+}
+
+#f3 {
+    transform: rotateY(-90deg) translateZ(100px);
+    box-shadow: 0 0 10px lightgray;
+    
+    background-color:orange;
+    background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRjS9ndYsZ82eY6HjN1Sc4rTqHIq-qTx62C0w&usqp=CAU");
+    background-size:100% 100%;
+}
+
+#f4 {
+    transform: rotateY(90deg) translateZ(100px);
+    box-shadow: 0 0 10px lightgray;
+    background-color:violet;
+    background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTw5WQxw9z1ip2l9-qkmfSqEdGJ97fYtIBMpA&usqp=CAU");
+    background-size:100% 100%;
+}
+#f5 {
+    transform: rotateX(90deg) translateZ(100px);
+    box-shadow: 0 0 10px lightgray;
+    background-color:green;
+    background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSP1CroHGjQ1tlvi8jbNZ3a7y0d8rBZJbmIAw&usqp=CAU");
+    background-size:100% 100%;
+}
+
+#f6 {
+    transform: rotateX(-90deg) translateZ(100px);
+    box-shadow: 0 0 10px lightgray;
+    background-color:blue;
+    background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRtH3nfAedetvWrZxs_1W1gTwPPO9sTd4hQhA&usqp=CAU");
+    background-size:100% 100%;
+}
+@keyframes spin{    
+    20% { 
+        transform: rotateY(-450deg) rotateX(360deg); 
+    }
+    40% {
+        transform: rotateY(90deg) rotateX(-360deg); 
+    }
+    60% { 
+    transform: rotateY(-360deg) rotateX(450deg); 
+    }
+    80% { 
+    transform: rotateY(360deg) rotateX(-90deg);
+    }
+}
+
+#aud{
+    display:none;
+}
+iframe{
+    position:fixed;
+    height:100vh;
+    width:100vw;
+    border-style:none;
+    display:none;
+}
+#rn{
+    position:fixed;
+    top:5px;
+    left:5px;
+    background-color:white;
+    color:black;
+    border-radius:20px;
+    font-size:7px;
+    padding:2px;
+    display:none;
+}
+        </style>
+        <script>
+window.addEventListener("mouseover",play);
+window.addEventListener("click",play);
+function play(){ 
+    document.getElementById("aud").play();
+}
+
+
+
+
+var x = 0
+//closing and opening section ---------------------
+
+function normal(){
+    $("#bar_1").css("transform","rotate(0deg)");
+    $("#bar_2").css("transform","rotate(0deg)");
+    $("#bar_3").css("transform","rotate(0deg)");
+    $(".bar_content_container").css("left","-80vw");
+    $(".bar_container").css("left","0vw");
+    $("#primary").css("left","0vw");
+    $(".containt").css("left","0vw");
+}
+
+function bar_function(){
+    if (x==0){
+        $("#bar_1").css("transform","rotate(45deg)");
+        $("#bar_2").css("transform","rotate(-45deg)");
+        $("#bar_3").css("transform","rotate(45deg)");
+        $(".bar_content_container").css("left","0vw");
+        $(".bar_container").css("left","80vw");
+        $("#primary").css("left","80vw");
+        $(".containt").css("left","80vw");
+        x = 1;
+    }
+    else{
+        normal();
+        x = 0;
+    }
+}
+
+
+function openCake(){
+    normal();
+    $("#birthday_cake").css("display","block");
+}
+function closeCake(){
+    normal();
+    $("#birthday_cake").css("display","none");
+}
+function openSpin(){
+    normal();
+    $("#spin_container").css("display","block");
+}
+function closeSpin(){
+    normal();
+    $("#spin_container").css("display","none");
+}
+function nextpg(){
+    $("iframe").css("display","block");
+    $("#rn").css("display","block");
+}
+function closepg(){
+    $("#rn").css("display","none");
+    $("iframe").css("display","none");
+    var igr = document.getElementsByTagName("iframe")[0];
+    igr.src = igr.src;
+}
+function warning(){
+    Swal.fire({
+        icon: 'error',
+        title: '😂😅 क्या लोगी अब जी 😅😂',
+        html: 'Aacha bata do kya chahiye 4 - 5 saal me job karne lagenge to de hi denge. Abhi 11th me papa ke paise ka to nahi dunga.',
+        footer: '&copy All rights reserved !'
+    });
+}
+//-------------------------------------------------
+
+
+window.onload = function(){
+    
+    $(".loader_container").css("display","none");
+    $(".bar_container").css("display","block");
+    $("#primary").css("display","block");
+    $(".containt").css("display","block");
+    
+    
+    Swal.fire({
+        icon: 'success',
+        title: 'Welcome',
+        html: 'Happy BIRTHDAY KHUSHI',
+        footer: '&copy All rights reserved !'
+    });
+    
+    
+    
+    
+    
+    
+    /*type writer effect logic --------------------*/
+    var _CONTENT = [ 
+        "Hay There Khushi 👋", 
+        "kaisi ho ? 😌", 
+        "Mast hi hogi.",
+        "Nalayak photo nahi di 😔",
+        "Mai aise hi bana diya 🙆‍♂️",
+        "Apne maximum effort ke saath 🤓",
+        "Aacha Wait !",
+        "Wish you a very very happy birthday 🥰",
+        "ab isko dekh lo",
+        "upper left me tin line 👆",
+        "ko click kar do.",
+        "Ab dekh ke ja ke birthday manao 🥞",
+        "birthday manao aur pado 🥰",
+        "Bye Bye 🙋‍♂️",
+        "Have a good day 🙃"
+    ];
+    var _PART = 0;
+    var _PART_INDEX = 0;
+    var _INTERVAL_VAL;
+    var _ELEMENT = document.querySelector("#text");
+    var _CURSOR = document.querySelector("#cursor");
+    
+    function Type() { 
+        var text =  _CONTENT[_PART].substring(0, _PART_INDEX + 1);
+        _ELEMENT.innerHTML = text;
+        _PART_INDEX++;
+
+        if(text === _CONTENT[_PART]) {
+            _CURSOR.style.display = 'none';
+
+            clearInterval(_INTERVAL_VAL);
+            setTimeout(function() {
+                _INTERVAL_VAL = setInterval(Delete, 50);
+            }, 1000);
+        }
+    }
+
+    function Delete() {
+        var text =  _CONTENT[_PART].substring(0, _PART_INDEX - 1);
+        _ELEMENT.innerHTML = text;
+        _PART_INDEX--;
+
+        if(text === '') {
+            clearInterval(_INTERVAL_VAL);
+
+            if(_PART == (_CONTENT.length - 1))
+                _PART = 0;
+            else
+                _PART++;
+        
+            _PART_INDEX = 0;
+
+            setTimeout(function() {
+                _CURSOR.style.display = 'inline-block';
+                _INTERVAL_VAL = setInterval(Type, 200);
+            }, 200);
+        }
+    }
+
+    _INTERVAL_VAL = setInterval(Type, 100);
+    /*type writer logic ends ----------------------*/
+}
+        </script>
+    </body>
+</html>
